@@ -25,4 +25,4 @@ Create an argo-application via the ui.
 ## Renew the sealed secrets
 
 As the sealed secrets are created with a public key that lives in your cluster, changing a cluster leads to the sealed secret not being decryptable.
-Renew them as described in `sealed-secret-setup/Readme.md`.
+Renew them as described in `sealed-secret-setup/Readme.md`. For now, you have to renew the sealed secret file `demo-app/overlays/dev/mysealedsecret.yaml`.
