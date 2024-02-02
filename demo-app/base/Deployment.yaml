@@ -1,0 +1,27 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: whoami
+  labels:
+    app: whoami
+spec:
+  replicas: 1
+  minReadySeconds: 10
+  selector:
+    matchLabels:
+      app: whoami
+      release: whoami
+  template:
+    metadata:
+      labels:
+        app: whoami
+        release: whoami
+    spec:
+      containers:
+      - name: whoami
+        image: "traefik/whoami"
+        imagePullPolicy: IfNotPresent
+        ports:
+        - name: http
+          containerPort: 80
+          protocol: TCP

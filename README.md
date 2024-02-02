@@ -4,7 +4,7 @@
 
 ```bash
 kubectl create ns argocd
-kubectl apply -k .
+kubectl apply -k argocd-setup
 
 kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data['password']}" | base64 -d
 kubectl port-forward svc/argocd-server 8080:80 -n argocd
