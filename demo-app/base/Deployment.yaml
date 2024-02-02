@@ -16,14 +16,14 @@ spec:
         image: traefik/whoami
         ports:
         - containerPort: 80
-        # readinessProbe:
-        #   periodSeconds: 5
-        #   tcpSocket:
-        #     port: 6379
-        # livenessProbe:
-        #   periodSeconds: 5
-        #   tcpSocket:
-        #     port: 6379
+        readinessProbe:
+          periodSeconds: 5
+          tcpSocket:
+            port: 80
+        livenessProbe:
+          periodSeconds: 5
+          tcpSocket:
+            port: 80
         resources:
           limits:
             memory: 256Mi
