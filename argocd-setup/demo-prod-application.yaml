@@ -10,7 +10,7 @@ spec:
     targetRevision: HEAD
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: demo-app
+    namespace: demo-app-prod
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
