@@ -3,6 +3,7 @@ kind: Kustomization
 
 resources:
 - ../../base
+- mysealedsecret.yaml
 
 patches:
 - path: Deployment.yaml

@@ -21,3 +21,8 @@ Create an argo-application via the ui.
 3. Paste in the content of `demo-dev-application.yaml` located in `argocd-setup/`.
 4. Click Save and then create the application.
 5. Repeat the same for the `demo-prod-application.yaml`.
+
+## Renew the sealed secrets
+
+As the sealed secrets are created with a public key that lives in your cluster, changing a cluster leads to the sealed secret not being decryptable.
+Renew them as described in `sealed-secret-setup/Readme.md`.
