@@ -19,5 +19,5 @@ Create an argo-application via the ui.
 1. Click `new app`.
 2. In the top right select `Edit as yaml`.
 3. Paste in the content of `demo-dev-application.yaml` located in `argocd-setup/`.
-4. Create the application.
+4. Click Save and then create the application.
 5. Repeat the same for the `demo-prod-application.yaml`.
