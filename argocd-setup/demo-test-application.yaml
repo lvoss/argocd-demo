@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: 'demo-test'
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/lvoss/argocd-demo.git'
+    path: demo-app/overlays/dev
+    targetRevision: HEAD
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: demo-app-test
+  syncPolicy:
+    automated: {}
+    syncOptions:
+      - CreateNamespace=true
